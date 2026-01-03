@@ -1,12 +1,14 @@
 {
   "name": "contacts-management",
   "version": "1.0.0",
-  "description": "Contact Management App (MERN Stack)",
+  "description": "Full-stack contact management app",
   "scripts": {
-    "build": "cd frontend && npm run build && cd ../backend && npm install",
-    "start": "cd backend && npm start",
-    "dev": "concurrently \"cd backend && npm run dev\" \"cd frontend && npm run dev\""
+    "build": "cd frontend && npm run build",
+    "install:backend": "cd backend && npm install",
+    "start": "npm --prefix backend start",
+    "dev": "concurrently \"npm --prefix frontend run dev\" \"npm --prefix backend run dev\""
   },
-  "keywords": ["mern", "contacts", "react", "express", "mongodb"],
-  "license": "MIT"
+  "engines": {
+    "node": "18.x"
+  }
 }
