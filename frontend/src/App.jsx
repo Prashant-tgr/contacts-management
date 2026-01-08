@@ -3,7 +3,8 @@ import axios from 'axios'
 import ContactForm from './components/ContactForm'
 import ContactList from './components/ContactList'
 
-const API = import.meta.env.VITE_API_URL || 'http://localhost:5000/api/contacts'
+const BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api/contacts'
+const API = `${BASE_URL}/api/contacts`;
 
 export default function App() {
   const [contacts, setContacts] = useState([])
